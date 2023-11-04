@@ -1,0 +1,46 @@
+.timer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.field {
+  margin: 0 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 16px;
+}
+
+#datetime-picker {
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  background-color: #0056b3;
+}
