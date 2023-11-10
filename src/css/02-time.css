@@ -44,3 +44,8 @@ button:hover {
 button:focus {
   background-color: #0056b3;
 }
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
