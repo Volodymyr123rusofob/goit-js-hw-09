@@ -1,7 +1,7 @@
 import Notiflix from 'notiflix';
 const linkForm = document.querySelector('.form');
 let timerId = null;
-let currentValuePromis = 0;
+let currentValuePromis = 1;
 let delay = 0;
 
 linkForm.addEventListener('submit', e => {
@@ -11,7 +11,7 @@ linkForm.addEventListener('submit', e => {
   delay = Number(form.elements.delay.value);
   const step = Number(form.elements.step.value);
   timerId = setInterval(() => {
-    if (amount === currentValuePromis) {
+    if (amount < currentValuePromis) {
       clearInterval(timerId);
       return;
     }
@@ -28,7 +28,7 @@ linkForm.addEventListener('submit', e => {
       });
     currentValuePromis += 1;
     delay += step;
-  }, delay);
+  });
 });
 
 function createPromise(position, delay) {
@@ -41,3 +41,4 @@ function createPromise(position, delay) {
     }
   });
 }
+
